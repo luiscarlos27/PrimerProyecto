@@ -3,15 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.soft.primerproyecto;
+package com.soft.primerproyecto.Dao;
 
 /**
  *
  * @author Usuario
  */
-public class service1 {
-    public String nombre;
-    public String apellido;
-    
+public class BaseDaoHibernate {
     
 }

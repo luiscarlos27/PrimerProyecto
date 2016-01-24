@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/01/2016 09:36:45 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.soft.primerproyecto.Entidades.Sucursal" table="sucursal" catalog="universidad" optimistic-lock="version">
+        <id name="idSucursal" type="java.lang.Integer">
+            <column name="id_sucursal" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="65535" not-null="true" />
+        </property>
+        <property name="direccion" type="string">
+            <column name="direccion" length="65535" not-null="true" />
+        </property>
+        <property name="telefono" type="int">
+            <column name="telefono" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
