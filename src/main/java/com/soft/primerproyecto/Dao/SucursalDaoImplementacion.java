@@ -7,6 +7,8 @@ package com.soft.primerproyecto.Dao;
 
 import com.soft.primerproyecto.Entidades.Sucursal;
 import java.util.List;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 /**
  *
@@ -15,29 +17,44 @@ import org.springframework.stereotype.Repository;
 @Repository("sucursalDao")
 public class SucursalDaoImplementacion extends BaseDaoHibernate<Sucursal, Integer> implements SucursalDao {
 
+    @Autowired
+    public SucursalDaoImplementacion(SessionFactory sessionFactory) {
+        this.setType(Sucursal.class);
+        this.setSessionFactory(sessionFactory);
+    }
+    
     @Override
     public List<Sucursal> findAll() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        class Local {};
+        return executeNamedQuery(Local.class.getEnclosingMethod(), null);
     }
 
     @Override
     public List<Sucursal> findById(Integer id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Object[] parameters = {id}; 
+        class Local {};
+        return executeNamedQuery(Local.class.getEnclosingMethod(), parameters);
     }
 
     @Override
     public List<Sucursal> findByNombre(String nombre) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Object[] parameters = {nombre}; 
+        class Local {};
+        return executeNamedQuery(Local.class.getEnclosingMethod(), parameters);
     }
 
     @Override
     public List<Sucursal> findByTelefono(String tel) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Object[] parameters = {tel}; 
+        class Local {};
+        return executeNamedQuery(Local.class.getEnclosingMethod(), parameters);
     }
 
     @Override
     public List<Sucursal> findByDireccion(String direccion) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Object[] parameters = {direccion}; 
+        class Local {};
+        return executeNamedQuery(Local.class.getEnclosingMethod(), parameters);
     }
     
 }
