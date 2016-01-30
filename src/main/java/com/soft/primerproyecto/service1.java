@@ -13,5 +13,7 @@ public class service1 {
     public String nombre;
     public String apellido;
     
-    
+    public void datos(){
+        
+    }
 }
