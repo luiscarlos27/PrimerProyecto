@@ -17,7 +17,6 @@ import org.springframework.core.io.Resource;
 import org.testng.log4testng.Logger;
 
 /**
- *
  * @author Usuario
  */
 public class ImplementacionDaoTestServices extends AbstractTransactionalTestNGSpringContextTests{
