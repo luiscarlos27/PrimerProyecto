@@ -11,7 +11,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
-import static org.junit.Assert.*;
+//import static org.junit.Assert.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.testng.log4testng.Logger;
@@ -20,11 +20,9 @@ import org.testng.log4testng.Logger;
  * @author Usuario
  */
 public class ImplementacionDaoTestServices extends AbstractTransactionalTestNGSpringContextTests{
-    
     private static Logger log = Logger.getLogger(SucursalDao.class);
     @Autowired
     private SucursalDao sucursal;
-    
     public ImplementacionDaoTestServices() {
     }
     
